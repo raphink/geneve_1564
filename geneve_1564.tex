@@ -1,5 +1,4 @@
-\documentclass[twocolumn=true,paper=a5]{scrartcl}
-\usepackage{lipsum}
+\documentclass[twocolumn,paper=a5,DIV=7]{scrbook}
 
 \usepackage{bigfoot}
 \usepackage{ragged2e}
@@ -18,17 +17,17 @@
 \DeclareNewFootnote{verse}[arabic]
 
 
-\setlength{\marginparwidth}{1.5cm}% adjust to your document's needs
+\setlength{\marginparwidth}{4em}% adjust to your document's needs
 
 
 \newcommand{\sidefootnote}[1]{%
    \footnotemark
-   \marginpar{\footnotesize\textsuperscript{\thefootnote}\RaggedRight#1}
+   \marginpar{\tiny\textsuperscript{\thefootnote}\justifying#1}
 }
 
 \newcommand{\versefootnote}[1]{%
    \footnotemarkverse
-   \marginpar{\textit\footnotesize\textsuperscript{\thefootnoteverse}\RaggedRight#1}
+   \marginpar{\tiny\textsuperscript{\thefootnoteverse}\justifying\itshape#1}
 }
 
 \newcounter{verse}
@@ -39,16 +38,16 @@
 
 \begin{document}
 
-{\itshape\footnotesize
+{\itshape\scriptsize
 Creation du ciel \& de la terre, \& de tout ce qui y est comprins.
  De la lumiere aussi, \& de l'homme,
  Auquel tout est assuietti.
- Dieu benit toutes ses \oe{}uuvres,
+ Dieu benit toutes ses \oe{}uvres,
  qu'il a accomplies en six iours.
 }
 
 % TBD: span lettrine on 10 lines
-\bverse \lettrine[lines=2]{D}{}ieu\sidefootnote{Fit de rien, \& sans aucune matiere.} crea 
+\bverse \lettrine[lines=2]{D}{i}eu\sidefootnote{Fit de rien, \& sans aucune matiere.} crea 
  \sidefootnote{Tout premierement, \& avit qu'il y avait aucune
  creature}au commencement\sidefootnote{Le ciel \& la terre,
  les eaux, les abysmes, se prennent ici pour vne mesme chose}
