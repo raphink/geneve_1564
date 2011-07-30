@@ -1,5 +1,5 @@
 \documentclass[twocolumn,paper=8in:13in,pagesize=pdftex,12pt]{scrbook}
-\areaset[0.5in]{6in}{11in}
+\areaset[0.5in]{5.2in}{10.8in}
 
 \usepackage{bigfoot}
 \usepackage{ragged2e}
@@ -9,6 +9,7 @@
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont{Linux Libertine O}
 \setmainfont[RawFeature={+ss02,+cv01,+dlig}]{EB Garamond}
+\newfontfamily\booktitlefont[LetterSpace=40,WordSpace=7]{EB Garamond}
 
 \usepackage{graphicx}
 \usepackage{lettrine}
@@ -90,7 +91,7 @@
 
 \renewcommand{\thesection}{\Roman{section}}
 \titleformat{\section}[hang]%
-   {\centering}%
+   {\booktitlefont\centering}%
    {CHAPITRE\ \thesection}%
    {5pt}%
    {}
@@ -140,7 +141,7 @@ Ce premier livre comprendre l'origine \& causes de toutes choses, principalement
 \end{comment}
 
 % TBD: span lettrine on 10 lines
-\bversenonum \lettrine[lines=10]{D}{}%
+\bversenonum \lettrine[lines=10,image=true]{D}{}%
  \versenote{\bibleverse{Job}(38:4), \bibleverse{Ps}(33:6), \& 89.13}Ieu
  \sidenote{Fit de rien, \& sans aucune matiere.}crea 
  \sidenote{Tout premierement, \& av\~at qu'il y eut aucune
