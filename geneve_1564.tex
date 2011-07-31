@@ -1,5 +1,5 @@
-\documentclass[twocolumn,paper=8in:13in,pagesize=pdftex,12pt]{scrbook}
-\areaset[0.5in]{5.1in}{10.8in}
+\documentclass[twocolumn,paper=8in:14in,pagesize=pdftex,12pt]{scrbook}
+\areaset[0.5in]{4.9in}{12in}
 
 \usepackage{bigfoot}
 \usepackage{ragged2e}
@@ -8,8 +8,8 @@
 \usepackage{xunicode}
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont{Linux Libertine O}
-\setmainfont[RawFeature={+ss02,+cv01,+dlig}]{EB Garamond}
-\newfontfamily\booktitlefont[LetterSpace=40,WordSpace=7]{EB Garamond}
+\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04}]{EB Garamond}
+\newfontfamily\booktitlefont[LetterSpace=40,WordSpace=7,RawFeature={+ss02,+cv01,+dlig}]{EB Garamond}
 
 \usepackage{graphicx}
 \usepackage{lettrine}
@@ -22,14 +22,17 @@
 \renewcommand*{\BRvsep}{,}%
 \setbooktitle{Job}{Iob}%
 \setbooktitle{Ps}{Pseam.}%
+\setbooktitle{Jn}{Iean}%
 \setbooktitle{He}{Hebr.}%
 \renewcommand{\BRbooktitlestyle}{\textit}
 
 
 % Environments
+\usepackage{setspace}
 \newenvironment{comment}
-  {\itshape\scriptsize\setlength\hspace{-1em}}
-  {}
+  {\begin{spacing}{0.8}\itshape\scriptsize\setlength\hspace{-1em}}
+  {\end{spacing}}
+
 
 
 % Footnotes
@@ -56,11 +59,11 @@
 \newcounter{verse}
 \newcommand{\bverse}{%
   \addtocounter{verse}{1}
-  \par\theverse~
+  \theverse\quad
 }
 
-\newcommand{\bversenopar}{%
-   \addtocounter{verse}{1}\\\indent\theverse~
+\newcommand{\bversenopar}[1][\indent]{%
+   \addtocounter{verse}{1}\\#1\theverse~
 }
 
 \newcommand{\bversenonum}{%
@@ -80,7 +83,7 @@
 \titleformat{\chapter}[hang]%
    {\centering\huge}%
    {}%
-   {5pt}%
+   {0pt}%
    {}
 
 % Bible chapters
@@ -89,53 +92,67 @@
    \section{}{}
 }
 
-\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesection}{\roman{section}}
 \titleformat{\section}[hang]%
    {\booktitlefont\centering}%
-   {CHAPITRE\ \thesection}%
+   {\textsc{chapitre\ \thesection}.}%
    {5pt}%
    {}
+\titlespacing*{\section}
+  {0pt}{0pt}{0pt}
 
+
+\setlength{\parindent}{-5pt}
+\setlength{\parskip}{0pt}
+
+
+\linespread{0.9}
+\setlength{\columnsep}{6mm}
 
 \begin{document}
+
+\pagestyle{empty}
 
 \twocolumn[
 \begin{@twocolumnfalse}
 \bbook{Le premier livre de Moyse}{Dict Genese.}
 
 \begin{center}
-\large ARGVMENT.
+\booktitlefont\textsc{argument.}
 \end{center}
+\begin{center}
+\parbox{4.65in}{
 \begin{comment}
 Ce premier livre comprendre l'origine \& causes de toutes choses, principalement
- la creation de l'homme, qu'il a esté du commencement, sa cheute \& relevement:
+ la creation de l'homme, qu'il a esté du commencement, sa cheute \& relevement~:
  comment d'un tous ont esté procreés, \& pour leurs enormes pechés Dieu
  les a consumés, par le deluge, reservé huict, dont la semence a rempli toute
  la terre. Puis il descrit les vies, faicts, religion, \& lignees des saints
- Patriarches, qui ont vescu devant la Loy: Les benedictions, promesses,
- \& alliances du Seigneur faictes avec iceux : Comment de le la terre de Chanaan
+ Patriarches, qui ont vescu devant la Loy~: Les benedictions, promesses,
+ \& alliances du Seigneur faictes avec iceux~: Comment de le la terre de Chanaan
  sont descendus en Egypte. Aucuns ont appelé ce livre, le livre des Iustes.
  Toutefois ceci a obtenu entre nos predecesseurs \& nous, qu'il est appelé
- Genese, qui est un mot Grec, signifiant generation \& origine : d'autant
- qu'en icelui est descrite l'origine \& procreation de toutes choses :
+ Genese, qui est un mot Grec, signifiant generation \& origine~: d'autant
+ qu'en icelui est descrite l'origine \& procreation de toutes choses~:
  \& nommément des Peres anciens, qui ont esté tant devant qu'apres le deluge,
- \& eu esgard à IESVS CHRIST descendu d'iceux selon la chair.
+ \& eu esgard à \emph{\textsc{iesus christ}} descendu d'iceux selon la chair.
 \end{comment}
+}
+\end{center}
 \vspace{1cm}
 \end{@twocolumnfalse}
 ]
 
-\vspace{3cm}
 
 \bchapter
 
 \begin{comment}
- \chapnote[-40mm]{Ce premier cha\-pitre est fort difficile: \& pour cette cause,
+ \chapnote[-40mm]{Ce premier cha\-pitre est fort difficile~: \& pour cette cause,
  il estoit defendu entre les Hebrieux de le lire \& interpreter
  devant l'aage de trente ans.}Creation du ciel \& de la terre,
  II, 10. \& de tout ce qui y est comprins.
  3.14. De la lumiere aussi, 26 \& de l'homme,
- 18 Auquel tout est assuietti.
+ 18 {\addfontfeature{RawFeature=+swsh}Auquel} tout est assuietti.
  2.2. 18 Dieu benit toutes ses \oe{}uvres,
  31 qu'il a accomplies en six iours.
 \end{comment}
@@ -145,13 +162,16 @@ Ce premier livre comprendre l'origine \& causes de toutes choses, principalement
  \versenote[-40mm]{\bibleverse{Job}(38:4), \bibleverse{Ps}(33:6), \& 89.13}Ieu
  \sidenote[-30mm]{Fit de rien, \& sans aucune matiere.}crea 
  \sidenote[-30mm]{Tout premierement, \& av\~at qu'il y eut aucune
- creature}au commencement
+ creature, \bibleverse{Jn}(1:10).}au com \linebreak
+ mence - ment
  \sidenote[-30mm]{Le ciel \& la terre,
- les eaux, les abysmes, se prennent ici pour vne mesme chose:
+ les eaux, les abysmes, se prennent ici pour vne mesme chose~:
  asç. pour une matiere c\~ofuse \& sans forme, \~q Dieu forma
  \& agença apres par sa Parole.}le ciel \& la terre.
-\bversenopar Or la terre estoit sans forme, \& vuide, \& les tenebres estoyent sur les
-abysmes : \& l'Esprit de Dieu
+\bversenopar[]Or la\linebreak
+ terre eſ-\linebreak toit sans forme, \& \linebreak
+ vuide, \& les tenebres estoyent sur les
+abysmes~: \& l'Esprit de Dieu
  \sidenote[-45mm]{Ou, se mouvoit. C'est, soustenoit et conservoit
  en son estre cette matiere confuse.
  Car il est impossible, \~q aucune chose apres avoir esté
@@ -160,7 +180,7 @@ abysmes : \& l'Esprit de Dieu
  espandu par dessus les eaux.
 
 \bverse Adonc Dieu dît,
- \versenote[-20mm]{\bibleverse{He}(11:3)}Qu'il y ait lumiere.
+ \versenote[-20mm]{\bibleverse{He}(11:3)}Qu'il y ait lumie\-re.
  \sidenote[-20mm]{Cette lumiere n'estoit point encore au soleil, car
  il n'avoit pas esté creé, mais estoit en la main de Dieu,
  ay\~at son ordre successif avec les tenebres,
@@ -169,30 +189,30 @@ abysmes : \& l'Esprit de Dieu
  ministre \& dispensateur de cette lumiere, avec
  la lune \& estoilles.}Et la lumiere fut.
 
-\bverse Et Dieu vid \~q la lumiere estoit bonne :
- \& separa la lumiere des tenebres.
+\bverse Et Dieu vid \~q la lumiere estoit bon\-ne~: \& separa la lumiere des tenebres.
 
 \bverse Et Dieu appela la lumiere iour, \& les
  tenebres nuict. Lors fut faict le
- \sidenote{Ici est la cause pourquoy les Hebrieux c\~omencent
+ \sidenote[-5mm]{Ici est la cause pourquoy les Hebrieux c\~omencent
  le iour naturel le soir apres le soleil couchant.}soir \& le matin 
  du premier iour.
 
 \bverse ¶ Puis Dieu dît,
  \versenote{\bibleverse{Ps}(33:6) \& 136.5}Qu'il y ait une
- \sidenote[-15mm]{Ce mot d'est\~edue, compr\~ed tout ce qui
+ \pagebreak
+ \sidenote{Ce mot d'est\~edue, compr\~ed tout ce qui
  se voit par dessus nous, t\~at en la region celeste,
- qu'elementaire.}estendue entre les eaux,
+ qu'elementaire.}eſ\-tendue entre les eaux,
  \& qu'elle separe les
- \sidenote{Il est ici parlé de deux manieres
- d'eaux: asçavoir, celles q sont sous
+ \sidenote[5mm]{Il est ici parlé de deux manieres
+ d'eaux~: asçavoir, celles q sont sous
  l'estendue, comme la mer, les fleuves,
  \& autres qui sont sur la terre \&
  celles, qui sont sur l'estendue,
  comme sont les nuees pleines d'eau
  ça haut en l'air par dessus nous.
  Dieu a mis entre ces deux forces d'eaux
- une gr\~ade estendue, qu'on appelle le ciel:
+ une gr\~ade estendue, qu'on appelle le ciel~:
  de là nous appelons les oiseaux du ciel.}eaux d'avec les eaux.
 
 \bverse Dieu donc fit l'estendue, \& divisa les eaux, qui estoyent sous
@@ -202,10 +222,12 @@ abysmes : \& l'Esprit de Dieu
  Lors fut faict le soir \& le matin du second iour.
 
 \bverse ¶ Puis Dieu dît, 
- \versenote{\bibleverse{Ps}(33:7)}Que les eaux, qui sont sous le ciel,
+ \versenote{\bibleverse{Ps}(33:7)}~\sidenote{Ceci apparti\~et au sec\~od iour,
+ auquel Dieu separa, \& fit apparoir la terre du milieu des eaux.}Que les eaux,
+ qui sont sous le ciel,
  soyent assemblees en un lieu, \& que le sec apparoisse. Et fut ainsi faict.
 
-\bverse Et Dieu appela le sec, Terre, \& l'assemblee des eaux, mers.
+\bverse Et Dieu appe\char"A749 a le sec, Terre, \& l'assemblee des eaux, mers.
  Et Dieu vid que celà estoit bon.
 
 \bverse Et Dieu dît, Que la terre produise verdure, herbe produisant semence,
@@ -218,8 +240,22 @@ abysmes : \& l'Esprit de Dieu
 
 \bverse Lors fut faict le soir \& le matin du troisieme iour.
 
-\bverse ¶ Apres Dieu dît, Qu'il y ait luminaires en l'estendue du ciel, pour
- separer la nuict du iour: \& soy\~et en signes, en
+%skip j counter
+% TBD: do it better
+\addtocounter{footnote}{1}
+
+\bverse ¶ Apres Dieu dît,
+ \versenote[-45mm]{\bibleverse{Ps}(13:6-7)}~\sidenote[-40mm]{Il institue un nouvel ordre
+ en nature, quand il faut \& ordonne le soleil distributeur
+ de cette lumiere qu'il avoit creée avant lui, \& avant la lune
+ \& les estoilles.} Qu'il y ait luminaires en l'estendue du ciel, pour
+ separer la nuict du iour~: \& soy\~et en
+ \sidenote[-25mm]{C'est pour si\-gnifier diverses dispositions
+ que les corps \~iferieurs selon l'ordre de nature
+ ont des corps celestes, c\~ome eau ses sec\~odes ordonnees
+ de Dieu à celà.
+ En quoy toutesfois faut fuir curiosité \& superstition \~q
+ les h\~omes ont c\~otrouvee sur celà.}signes, a en
 
 \end{document}
 
