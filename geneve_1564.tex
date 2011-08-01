@@ -56,8 +56,8 @@
    \footnotemarkverse%
    \marginpar{\vspace{#1}\tiny\textsuperscript{\thefootnoteverse}\justifying#2.}}
 
-\newcommand{\fakenote}[2]{%
-   \par\noindent\textsuperscript#1\justifying#2
+\newcommand{\fakenote}[3][\space]{%
+   \par\noindent#1\textsuperscript#2\justifying#3
 }
 
 
@@ -275,9 +275,11 @@ abysmes~: \& l'Esprit de Dieu
  % Continue note f from left column
  pourquoy les Hebrieux c\~omencent
  le iour naturel le soir apres le soleil couchant.
-   \fakenote{g}{Ce mot d'est\~edue, compr\~ed tout ce qui
+   \fakenote{g}{Ce mot d'Est\~e \linebreak
+ due, compr\~ed tout ce qui
  se voit par dessus nous, t\~at en la region celeste,
  qu'elementaire.}
+
    \fakenote{4}{\bibleverse{Ps}(33:7).}
    \fakenote{h}{Il est ici parlé de deux manieres
  d'eaux~: asçavoir, celles q sont sous
@@ -293,14 +295,23 @@ abysmes~: \& l'Esprit de Dieu
  auquel Dieu separa, \& fit apparoir la terre du milieu des eaux.}
    \fakenote{k}{Il institue un nouvel ordre
  en nature, quand il faut \& ordonne le soleil distributeur
- de cette lumiere qu'il avoit creée avant lui, \& avant la lune \& les estoilles.}
-   \fakenote{5}{\bibleverse{Ps}(13:6-7)}
-   \fakenote{l}{C'est pour si\-gnifier diverses dispositions
- que les corps \~iferieurs selon l'ordre de nature
- ont des corps celestes, c\~ome eau ses sec\~odes ordonnees
- de Dieu à celà.
- En quoy toutesfois faut fuir curiosité \& superstition \~q
- les h\~omes ont c\~otrouvee sur celà.}
+ de cette lumiere qu'il avoit creée avant lui, \& avant la lune \& les eſ- \linebreak
+ toilles.}
+   \fakenote{5}{\bibleverse{Ps}(136:7)}
+   \fakenote{l}{C'est pour si- \linebreak
+ gnifier diverses di- \linebreak
+ spositions que les corps \~iferieurs se- \linebreak
+ lon l'ordre de na- \linebreak 
+ ture ont des corps \linebreak
+ celestes, c\~ome cau \linebreak
+ ses sec\~odes ordon \linebreak
+ nees de Dieu à ce- \linebreak 
+ là.  En quoy tou- \linebreak
+ tesfois faut fuir cu- \linebreak
+ riosité \& supersti- \linebreak
+ tion \~q les h\~omes \linebreak
+ ont c\~otrouvee sur \linebreak
+ celà.}
 }
 
 \end{document}
