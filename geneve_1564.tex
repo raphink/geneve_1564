@@ -91,6 +91,8 @@
    {}%
    {0pt}%
    {}
+\titlespacing*{\chapter}
+  {0pt}{0pt}{0pt}
 
 % Bible chapters
 \newcommand{\bchapter}{%
@@ -108,6 +110,17 @@
   {0pt}{0pt}{0pt}
 
 
+% Headings
+\usepackage{scrpage2}
+\rofoot[]{}
+\ohead[\pagemark]{\pagemark}
+
+\pagestyle{scrplain}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+% Paragraphs
+
 \setlength{\parindent}{-5pt}
 \setlength{\parskip}{4pt}
 
@@ -116,8 +129,6 @@
 \setlength{\columnsep}{6mm}
 
 \begin{document}
-
-\pagestyle{empty}
 
 \twocolumn[
 \begin{@twocolumnfalse}
@@ -149,7 +160,6 @@ Ce premier livre comprendre l'origine \& causes de toutes choses, principalement
 \end{comment}
 }
 \end{center}
-\vspace{1cm}
 \end{@twocolumnfalse}
 ]
 
