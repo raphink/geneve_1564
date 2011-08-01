@@ -56,6 +56,11 @@
    \footnotemarkverse%
    \marginpar{\vspace{#1}\tiny\textsuperscript{\thefootnoteverse}\justifying#2.}}
 
+\newcommand{\fakenote}[2]{%
+   \par\noindent\textsuperscript#1\justifying#2
+}
+
+
 % Bible verses
 \newcounter{verse}
 \newcommand{\bverse}{%
@@ -152,9 +157,7 @@ Ce premier livre comprendre l'origine \& causes de toutes choses, principalement
 \bchapter
 
 \begin{comment}
- \chapnote[-40mm]{Ce premier cha\-pitre est fort difficile~: \& pour cette cause,
- il estoit defendu entre les Hebrieux de le lire \& interpreter
- devant l'aage de trente ans.}Creation du ciel \& de la terre,
+ \footnotemarkchapter{}Creation du ciel \& de la terre,
  II, 10. \& de tout ce qui y est com\-prins.
  3.14. De la lumiere aussi, 26 \& de l'homme,
  18 {\addfontfeature{RawFeature=+swsh}Auquel} tout est assuietti.
@@ -166,62 +169,68 @@ Ce premier livre comprendre l'origine \& causes de toutes choses, principalement
 
 % TBD: span lettrine on 10 lines
 \bversenonum \lettrine[lines=10,image=true]{D}{}%
- \versenote[-40mm]{\bibleverse{Job}(38:4), \bibleverse{Ps}(33:6), \& 89.13}Ieu
- \sidenote[-30mm]{Fit de rien, \& sans aucune matiere.}crea 
- \sidenote[-30mm]{Tout premierement, \& av\~at qu'il y eut aucune
- creature, \bibleverse{Jn}(1:10).}au com \linebreak
+ \footnotemarkverse{}Ieu
+ \footnotemark{}crea 
+ \footnotemark{}au com \linebreak
  mence - ment
- \sidenote[-30mm]{Le ciel \& la terre,
- les eaux, les abysmes, se prennent ici pour vne mesme chose~:
- asç. pour une matiere c\~ofuse \& sans forme, \~q Dieu forma
- \& agença apres par sa Parole.}le ciel \& la terre.
+ \footnotemark{}le ciel \& la terre.
 \bversenopar[]Or la\linebreak
  terre eſ-\linebreak toit sans forme, \& \linebreak
  vuide, \& les tenebres estoyent sur les
 abysmes~: \& l'Esprit de Dieu
- \sidenote[-45mm]{Ou, se mouvoit. C'est, soustenoit et conservoit
- en son estre cette matiere confuse.
- Car il est impossible, \~q aucune chose apres avoir esté
- faictes, puisse subsister un seul moment, si Dieu ne la soustient
- \& c\~oserve par sa vertu, \bibleverse{Ps}(130:).}estoit
+ \footnotemark{}estoit
  espandu par dessus les eaux.
 
+
+
 \bverse Adonc Dieu dît,
- \versenote[-20mm]{\bibleverse{He}(11:3)}Qu'il y ait lumie\-re.
- \sidenote[-20mm]{Cette lumiere n'estoit point encore au soleil, car
- il n'avoit pas esté creé, mais estoit en la main de Dieu,
- ay\~at son ordre successif avec les tenebres,
- pour faire le iour \& la nuict \& ce iusques au
- quatrieme iour, que Dieu fit le soleil pour estre
- ministre \& dispensateur de cette lumiere, avec
- la lune \& estoilles.}Et la lumiere fut.
+ \footnotemarkverse{}Qu'il y ait lumie\-re.
+ \footnotemark{}Et la lumiere fut.
 
 \bverse Et Dieu vid \~q la lumiere estoit bon\-ne~: \& separa la lumiere des tenebres.
 
 \bverse Et Dieu appela la lumiere iour,\& les
  tenebres nuict. Lors fut faict le
- \sidenote[-5mm]{Ici est la cause pourquoy les Hebrieux c\~omencent
- le iour naturel le soir apres le soleil couchant.}soir \& le matin 
+ \footnotemark{}soir \& le matin 
  du premier iour.
 
 \bverse ¶ Puis Dieu dît,
- \versenote{\bibleverse{Ps}(33:6) \& 136.5}Qu'il y ait une
- \sidenote{Ce mot d'est\~edue, compr\~ed tout ce qui
- se voit par dessus nous, t\~at en la region celeste,
- qu'elementaire.}eſ\-tendue entre les eaux,
+ \footnotemarkverse{}Qu'il y ait une
+ \footnotemark{}eſ\-tendue entre les eaux,
  \& qu'elle separe les
- \sidenote[5mm]{Il est ici parlé de deux manieres
- d'eaux~: asçavoir, celles q sont sous
- l'estendue, comme la mer, les fleuves,
- \& autres qui sont sur la terre \&
- celles, qui sont sur l'estendue,
- comme sont les nuees pleines d'eau
- ça haut en l'air par dessus nous.
- Dieu a mis entre ces deux forces d'eaux
- une gr\~ade estendue, qu'on appelle le ciel~:
- de là nous appelons les oiseaux du ciel.}eaux d'avec les eaux.
+ \footnotemark{}eaux d'avec les eaux.
 
 \bverse Dieu donc fit l'estendue, \& divisa\linebreak
+
+% Notes for the page
+\marginpar{\vspace{-5.7in}\tiny
+   \fakenote{I}{Ce premier cha\-pitre est fort difficile~: \& pour cette cause,
+ il estoit defendu entre les Hebrieux de le lire \& interpreter
+ devant l'aage de trente ans.}
+   \fakenote{a}{Fit de rien, \& sans aucune matiere.}
+   \fakenote{1}{\bibleverse{Job}(38:4), \bibleverse{Ps}(33:6), \& 89.13.}
+   \fakenote{b}{Tout premierement, \& av\~at qu'il y eut aucune
+ creature, \bibleverse{Jn}(1:10).}
+   \fakenote{2}{\bibleverse{He}(11:3).}
+   \fakenote{c}{Le ciel \& la terre,
+ les eaux, les abysmes, se prennent ici pour vne mesme chose~:
+ asç. pour une matiere c\~ofuse \& sans forme, \~q Dieu forma
+ \& agença apres par sa Parole.}
+   \fakenote{d}{Ou, se mouvoit. C'est, soustenoit et conservoit
+ en son estre cette matiere confuse.
+ Car il est impossible, \~q aucune chose apres avoir esté
+ faictes, puisse subsister un seul moment, si Dieu ne la soustient
+ \& c\~oserve par sa vertu, \bibleverse{Ps}(130:).}
+   \fakenote{e}{Cette lumiere n'estoit point encore au soleil, car
+ il n'avoit pas esté creé, mais estoit en la main de Dieu,
+ ay\~at son ordre successif avec les tenebres,
+ pour faire le iour \& la nuict \& ce iusques au
+ quatrieme iour, que Dieu fit le soleil pour estre
+ ministre \& dispensateur de cette lumiere, avec
+ la lune \& estoilles.}
+   \fakenote{3}{\bibleverse{Ps}(33:6) \& 136.5.}
+   \fakenote{f}{Ici est la cause}
+}
  \pagebreak
 
  \noindent les eaux, qui estoyent sous
@@ -231,8 +240,7 @@ abysmes~: \& l'Esprit de Dieu
  Lors fut faict le soir \& le matin du second iour.
 
 \bverse ¶ Puis Dieu dît, 
- \versenote{\bibleverse{Ps}(33:7)}~\sidenote{Ceci apparti\~et au sec\~od iour,
- auquel Dieu separa, \& fit apparoir la terre du milieu des eaux.}Que les eaux,
+ \footnotemarkverse{}~\footnotemark{}Que les eaux,
  qui sont sous le ciel,
  soyent assemblees en un lieu, \& que le sec apparoisse. Et fut ainsi faict.
 
@@ -255,20 +263,45 @@ abysmes~: \& l'Esprit de Dieu
 % TBD: do it better
 \addtocounter{footnote}{1}
 
-\bverse ¶ Apres Dieu dît,\versenote[-45mm]{\bibleverse{Ps}(13:6-7)}\,\sidenote[-40mm]{Il institue un nouvel ordre
- en nature, quand il faut \& ordonne le soleil distributeur
- de cette lumiere qu'il avoit creée avant lui, \& avant la lune
- \& les estoilles.}Qu'il y ait lumi \linebreak
+\bverse ¶ Apres Dieu dît,\footnotemarkverse{}\,\footnotemark{}Qu'il y ait lumi \linebreak
  naires en l'estendue du ciel, pour
  sepa\-rer la nuict du iour~: \& soy\~et en
- \sidenote[-25mm]{C'est pour si\-gnifier diverses dispositions
+ \footnotemark{}signes,
+
+\raggedleft a\quad en
+
+% Notes for the page
+\marginpar{\vspace{-5.7in}\tiny
+ % Continue note f from left column
+ pourquoy les Hebrieux c\~omencent
+ le iour naturel le soir apres le soleil couchant.
+   \fakenote{g}{Ce mot d'est\~edue, compr\~ed tout ce qui
+ se voit par dessus nous, t\~at en la region celeste,
+ qu'elementaire.}
+   \fakenote{4}{\bibleverse{Ps}(33:7).}
+   \fakenote{h}{Il est ici parlé de deux manieres
+ d'eaux~: asçavoir, celles q sont sous
+ l'estendue, comme la mer, les fleuves,
+ \& autres qui sont sur la terre \&
+ celles, qui sont sur l'estendue,
+ comme sont les nuees pleines d'eau
+ ça haut en l'air par dessus nous.
+ Dieu a mis entre ces deux forces d'eaux
+ une gr\~ade estendue, qu'on appelle le ciel~:
+ de là nous appelons les oiseaux du ciel.}
+   \fakenote{i}{Ceci apparti\~et au sec\~od iour,
+ auquel Dieu separa, \& fit apparoir la terre du milieu des eaux.}
+   \fakenote{k}{Il institue un nouvel ordre
+ en nature, quand il faut \& ordonne le soleil distributeur
+ de cette lumiere qu'il avoit creée avant lui, \& avant la lune \& les estoilles.}
+   \fakenote{5}{\bibleverse{Ps}(13:6-7)}
+   \fakenote{l}{C'est pour si\-gnifier diverses dispositions
  que les corps \~iferieurs selon l'ordre de nature
  ont des corps celestes, c\~ome eau ses sec\~odes ordonnees
  de Dieu à celà.
  En quoy toutesfois faut fuir curiosité \& superstition \~q
- les h\~omes ont c\~otrouvee sur celà.}signes,
-
-\raggedleft a\quad en
+ les h\~omes ont c\~otrouvee sur celà.}
+}
 
 \end{document}
 
