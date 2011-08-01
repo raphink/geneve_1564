@@ -1,4 +1,4 @@
-\documentclass[twocolumn,paper=a4,pagesize=pdftex,12pt]{scrbook}
+\documentclass[twocolumn,paper=a4,pagesize=pdftex,12pt,headinclude=on]{scrbook}
 \areaset[1in]{5in}{11in}
 
 \usepackage{bigfoot}
@@ -83,7 +83,8 @@
 \usepackage{fourier-orns}
 
 % Bible books
-\newcommand{\bbook}[3][]{%
+\newcommand{\bbook}[4][]{%
+  \includegraphics[width=6in]{#4}
   \chapter[#1]{#2,\\\Large #3\\\aldine}
 }
 \titleformat{\chapter}[hang]%
@@ -92,7 +93,7 @@
    {0pt}%
    {}
 \titlespacing*{\chapter}
-  {0pt}{0pt}{0pt}
+  {0pt}{0pt}{5pt}
 
 % Bible chapters
 \newcommand{\bchapter}{%
@@ -113,7 +114,7 @@
 % Headings
 \usepackage{scrpage2}
 \rofoot[]{}
-\ohead[\pagemark]{\pagemark}
+\ohead[\pagemark]{}
 
 \pagestyle{scrplain}
 \renewcommand*{\chapterpagestyle}{scrheadings}
@@ -132,7 +133,7 @@
 
 \twocolumn[
 \begin{@twocolumnfalse}
-\bbook{Le premier livre de Moyse}{Dict Genese.}
+\bbook{Le premier livre de Moyse}{Dict Genese.}{genese_heading}
 
 \begin{center}
 \booktitlefont\textsc{argument.}
