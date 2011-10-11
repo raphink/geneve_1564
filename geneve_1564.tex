@@ -8,7 +8,7 @@
 \usepackage{xunicode}
 \defaultfontfeatures{Ligatures=TeX}
 %\setmainfont{Linux Libertine O}
-\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04}]{EB Garamond}
+\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04,CharacterVariant=5:2}]{EB Garamond}
 \newfontfamily\booktitlefont[LetterSpace=40,WordSpace=7,RawFeature={+ss02,+cv01,+dlig}]{EB Garamond}
 \newfontfamily\spacedfont[LetterSpace=20,WordSpace=7,RawFeature={+ss02,+cv01,+dlig}]{EB Garamond}
 
@@ -85,7 +85,7 @@
 % Bible books
 \newcommand{\bbook}[4][]{%
   \makebox[\textwidth][c]{\includegraphics[width=6in]{#4}}
-  \chapter[#1]{#2,\\\Large #3\\\aldine}
+  \chapter[#1]{#2,\\\Large #3\\\char"2766}
 }
 \titleformat{\chapter}[hang]%
    {\centering\huge}%
@@ -171,7 +171,7 @@ Ce premier livre comprend l'origine \& causes de toutes choses, principalement
  \footnotemarkchapter{}Creation du ciel \& de la terre,
  II, 10. \& de tout ce qui y est com\-prins.
  3.14. De la lumiere aussi, 26 \& de l'homme,
- 18 {\addfontfeature{RawFeature=+swsh}Auquel} tout est assuietti.
+ 18 {\addfontfeature{RawFeature=+swsh}Auquel} tout est assubietti.
  2.2. 18 Dieu benit toutes ses \oe{}uvres,
  31 qu'il a accomplies en six iours.
 \end{comment}
