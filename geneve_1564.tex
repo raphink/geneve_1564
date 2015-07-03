@@ -41,6 +41,7 @@
 
 % Footnotes
 \DeclareNewFootnote{default}[alph]
+\DeclareNewFootnote{main}[alph]
 \DeclareNewFootnote{chapter}[Roman]
 \DeclareNewFootnote{verse}[arabic]
 
@@ -184,35 +185,35 @@ Ce premier livre comprend l'origine \& causes de toutes choses, principalement
 % TBD: span lettrine on 10 lines
 \bversenonum \lettrine[lines=10,image=true,loversize=0.05]{D}{}%
  \footnotemarkverse{}Ieu
- \footnotemark{}crea 
- \footnotemark{}au com \linebreak
+ \footnotemarkmain{}crea
+ \footnotemarkmain{}au com \linebreak
  mence - ment
- \footnotemark{}le ciel \& la terre.
+ \footnotemarkmain{}le ciel \& la terre.
 \bversenopar[]Or la\linebreak
  terre eſ-\linebreak toit sans forme, \& \linebreak
  vuide, \& les tenebres estoyent sur les
 abysmes~: \& l'Esprit de Dieu
- \footnotemark{}estoit
+ \footnotemarkmain{}estoit
  espandu par dessus les eaux.
 
 
 
 \bverse Adonc Dieu dît,
  \footnotemarkverse{}Qu'il y ait lumie\-re.
- \footnotemark{}Et la lumiere fut.
+ \footnotemarkmain{}Et la lumiere fut.
 
 \bverse Et Dieu vid \~q la lumiere estoit bon\-ne~: \& separa la lumiere des tenebres.
 
 \bverse Et Dieu appela la lumiere iour,\& les
  tenebres nuict. Lors fut faict le
- \footnotemark{}soir \& le matin 
+ \footnotemarkmain{}soir \& le matin 
  du premier iour.
 
 \bverse ¶ Puis Dieu dît,
  \footnotemarkverse{}Qu'il y ait une
- \footnotemark{}eſ\-tendue entre les eaux,
+ \footnotemarkmain{}eſ\-tendue entre les eaux,
  \& qu'elle separe les
- \footnotemark{}eaux d'avec les eaux.
+ \footnotemarkmain{}eaux d'avec les eaux.
 
 \bverse Dieu donc fit l'estendue, \& divisa\linebreak
 
@@ -284,7 +285,7 @@ abysmes~: \& l'Esprit de Dieu
  Lors fut faict le soir \& le matin du second iour.
 
 \bverse ¶ Puis Dieu dît, 
- \footnotemarkverse{}~\footnotemark{}Que les eaux,
+ \footnotemarkverse{}~\footnotemarkmain{}Que les eaux,
  qui sont sous le ciel,
  soyent assemblees en un lieu, \& que le sec apparoisse. Et fut ainsi faict.
 
@@ -305,12 +306,12 @@ abysmes~: \& l'Esprit de Dieu
 
 %skip j counter
 % TBD: do it better
-\addtocounter{footnote}{1}
+\addtocounter{footnotemain}{1}
 
-\bverse ¶ Apres Dieu dît,\footnotemarkverse{}\,\footnotemark{}Qu'il y ait lumi \linebreak
+\bverse ¶ Apres Dieu dît,\footnotemarkverse{}\,\footnotemarkmain{}Qu'il y ait lumi \linebreak
  naires en l'estendue du ciel, pour
  sepa\-rer la nuict du iour~: \& soy\~et en
- \footnotemark{}signes,
+ \footnotemarkmain{}signes,
 
 \raggedleft a\quad en
 
