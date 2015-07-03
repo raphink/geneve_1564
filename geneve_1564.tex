@@ -47,18 +47,6 @@
 
 \setlength{\marginparwidth}{4.3em}% adjust to your document's needs
 
-\newcommand{\chapnote}[2][0pt]{%
-   \footnotemarkchapter%
-   \marginpar{\vspace{#1}\tiny\textsuperscript{\thefootnotechapter}\justifying#2}}
-
-\newcommand{\sidenote}[2][0pt]{%
-   \footnotemark%
-   \marginpar{\vspace{#1}\tiny\textsuperscript{\thefootnote}\justifying#2}}
-
-\newcommand{\versenote}[2][0pt]{%
-   \footnotemarkverse%
-   \marginpar{\vspace{#1}\tiny\textsuperscript{\thefootnoteverse}\justifying#2.}}
-
 \newcommand{\fakenote}[3][\space]{%
    \par\noindent#1\textsuperscript#2\justifying#3
 }
