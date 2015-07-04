@@ -50,7 +50,9 @@
   }
 
 % Footnotes
+\usepackage{alphalph}
 \DeclareNewFootnote{main}[alph]
+\renewcommand{\thefootnotemain}{\alphalph{\value{footnotemain}}}
 \DeclareNewFootnote{chapter}[Roman]
 \DeclareNewFootnote{verse}[arabic]
 
