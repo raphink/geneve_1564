@@ -99,15 +99,16 @@
   {0pt}{0pt}{5pt}
 
 % Bible chapters
-\newcommand{\bchapter}{%
+\newcommand{\bchapter}[1][chapitre]{%
    \setcounter{verse}{0}%
+   \def\chaptertitle{#1}
    \section{}{}
 }
 
 \renewcommand{\thesection}{\roman{section}}
 \titleformat{\section}[hang]%
    {\booktitlefont\centering}%
-   {\textsc{chapitre\ \thesection}.}%
+   {\textsc{\chaptertitle\ \thesection}.}%
    {5pt}%
    {}
 \titlespacing*{\section}
@@ -473,6 +474,28 @@ pour viande. Et fut ainsi faict.
 tout ce qu'il avoit faict, \& voilà il estoit moult bon. Lors
 fut faict le soir \& le matin du sixieme
 iour.
+
+
+% Chapitre 2
+\bchapter[chap.]
+
+\begin{chaptercomment}
+ \emph{2} Dieu se repose le septieme iour,
+ \emph{3} \& le benit.
+ \emph{8} Le iardin d'Eden. \linebreak
+ \emph{9} Ce qui y est.
+ \emph{10} \& ce qui en sort :
+ \emph{8. 15} auquel Dieu \linebreak
+ met l'homme,
+ \emph{19} donnant noms aux animaux.
+ \emph{18. 21} Cree la \linebreak
+ femme,
+ \emph{24} \& institue le mariage.
+\end{chaptercomment}
+
+\vspace{\baselineskip}
+
+
 
 \end{document}
 
