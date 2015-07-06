@@ -69,7 +69,9 @@
 
 
 \setlength{\marginparwidth}{4.3em}% adjust to your document's needs
-
+\newcommand{\marginnotes}[2]{%
+  \marginpar{\vspace{#1}\tiny#2}
+}
 \newcommand{\fakenote}[3][\space]{%
    \par\noindent#1\textsuperscript#2\justifying#3
 }
@@ -237,7 +239,7 @@ abysmes~: \& l'Esprit de Dieu
 \bverse Dieu donc fit l'estendue, \& divisa\lb
 
 % Notes for the page
-\marginpar{\vspace{-6.0in}\tiny
+\marginnotes{-6.0in}{
    \fakenote{I}{Ce premier cha- \lb pitre est fort diffi- \lb
  cile~: \& pour cette \lb
  cause, il estoit de- \lb
@@ -338,7 +340,7 @@ a\quad en
 \end{flushright}
 
 % Notes for the page
-\marginpar{\vspace{-16.3cm}\tiny
+\marginnotes{-16.3cm}{
  % Continue note f from left column
  pourquoy les Hebrieux c\~omencent
  le iour naturel le soir apres le soleil couchant.
@@ -466,7 +468,7 @@ crea,\emph{di-ie},à l'image de Dieu:
 \bverse Et Dieu les benit,\& leur dît,\footnotemarkmain{}Fructi
 
 % Notes de gauche
-\marginpar{\vspace{-23.5cm}\tiny
+\marginnotes{-23.5cm}{
   \fakenote{m}{Ce mot deno-\lb
   te la distincti\~o \& \lb
   diversité des t\~eps \lb
