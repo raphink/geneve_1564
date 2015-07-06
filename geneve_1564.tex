@@ -8,8 +8,9 @@
 \usepackage{xunicode}
 \defaultfontfeatures{Ligatures=Historic,Contextuals=Alternate,Numbers=OldStyle,RawFeature={+ss02,+cv01,+dlig}}
 \setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04,CharacterVariant=5:2}]{EB Garamond}
-\newfontfamily\booktitlefont[LetterSpace=40,WordSpace=6]{EB Garamond}
-\newfontfamily\spacedfont[LetterSpace=20,WordSpace=3]{EB Garamond}
+% Do the replacements manually in titles, to not ruin the textsc
+\newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
+\newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
 \newfontfamily\lettrinefont{EB Garamond Initials}
 \newfontfamily\headerfont{EB Garamond}
 
@@ -145,7 +146,7 @@
 \bbook{Le premier livre de Moyse}{Dict Genese.}{genese_heading}
 
 \begin{center}
-\booktitlefont\textsc{argument.}
+\booktitlefont\textsc{argvment.}
 \end{center}
 \begin{center}
 \parbox{4.67in}{
@@ -165,7 +166,7 @@ Ce premier livre comprend l'origine \& causes de toutes choses, principalement
  signifiant generation \& origine~: d'autant
  qu'en icelui est descrite l'origine \& procreation de toutes choses~: \& nom- \linebreak
  mément des Peres anciens, qui ont esté tant devant qu'apres le deluge,
- \& eu esgard à {\spacedfont\emph{\textsc{iesus christ}}} descen- \linebreak
+ \& eu esgard à {\spacedfont\emph{\textsc{iesvs christ}}} descen- \linebreak
  du d'iceux selon la chair.
 \end{bookcomment}
 }
