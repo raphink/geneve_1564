@@ -1,6 +1,9 @@
 Bible de Genève 1564
 ====================
 
+[![Build Status](https://img.shields.io/travis/raphink/geneve_1564/master.svg)](https://travis-ci.org/raphink/geneve_1564)
+[![Latest Release](https://img.shields.io/github/release/raphink/geneve_1564.svg)](https://github.com/raphink/geneve_1564/releases)
+
 
 Historique
 -----------
