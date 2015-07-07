@@ -40,8 +40,6 @@
 \sbox\vsepbox{\vrule width 0.5px height 5px}
 %\sbox\vsepbox{|}
 
-\newcommand\bversion{FreMartin}
-
 % Romans 3 32
 \def\bref{}
 \newcounter{verse}
@@ -49,21 +47,22 @@
 \newcommand\bverse{%
   \addtocounter{verse}{1}
   \ifthenelse{\equal{\theverse}{1}}%
-    {\lettrine{\liningnums{\thechapter}}{}}%
+    {\lettrine{\liningnums{\arabic{section}}}{}}%
     {\vsep\marginpar{\footnotesize \theverse}}
-  \def\bref{\protect\bibleverse{\curbook}(\thechapter:\theverse)}
+  \def\bref{\protect\bibleverse{\curbook}(\arabic{section}:\theverse)}
   \extramark{bref}
 }
 \makeatother
 
 \newcommand\curbook{}
 \newcommand{\bbook}[2]{%
-  \setcounter{chapter}{0}
+  \chapter{#1}
+  \setcounter{section}{0}
   \renewcommand\curbook{#2}
 }
 
 \newcommand\bchapter{%
-  \addtocounter{chapter}{1}
+  \addtocounter{section}{1}
   \setcounter{verse}{0}
 }
 
