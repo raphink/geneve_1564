@@ -15,5 +15,3 @@ deploy:
   file: geneve_1564.pdf
   on:
     repo: raphink/geneve_1564
-    tags: true
-    all_branches: true
