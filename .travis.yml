@@ -7,7 +7,7 @@ install:
 matrix:
   include:
   - env: BUILD=pdf DEPLOY=true
-    script: rm -f geneve_1564.pdf; make geneve_1564.pdf LATEX_INTERACTION="nonstopmode -halt-on-error"
+    script: make geneve_1564.pdf LATEX_INTERACTION="nonstopmode -halt-on-error"
 deploy:
   provider: releases
   api_key:
