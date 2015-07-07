@@ -1,0 +1,17 @@
+language: c
+sudo: false
+install:
+- curl -L https://github.com/raphink/travis-texlive/releases/download/2015-05-13_01/texlive.tar.xz
+  | tar xJC ~
+- PATH=$HOME/texlive/bin/x86_64-linux:$PATH
+matrix:
+  include:
+  - env: BUILD=pdf DEPLOY=true
+    script: make geneve_1564.pdf LATEX_INTERACTION="nonstopmode -halt-on-error"
+deploy:
+  provider: releases
+  api_key:
+    secure: g9xqI+8A2IeHrdv18j33NSR8k04MRGbspPUJRnfSD5i72DSFRr2Jqv5RWpVbcRXue9VIHmF1MJjr6DBlfBDWNMH21dGsSP0AmC6oyfdrkvzM/oAzhJmBelZMA729S49UQhcJO0ZXAYC/W0np4LCjWd8Wj40oH3Ri/Nj3nOURtaQ=
+  file: geneve_1564.pdf
+  on:
+    repo: raphink/geneve_1564
