@@ -2,7 +2,6 @@ Bible de Genève 1564
 ====================
 
 [![Join the chat at https://gitter.im/raphink/geneve_1564](https://badges.gitter.im/raphink/geneve_1564.svg)](https://gitter.im/raphink/geneve_1564?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Build Status](https://img.shields.io/travis/raphink/geneve_1564/master.svg)](https://travis-ci.org/raphink/geneve_1564)
 [![Latest Release](https://img.shields.io/github/release/raphink/geneve_1564.svg)](https://github.com/raphink/geneve_1564/releases)
 
